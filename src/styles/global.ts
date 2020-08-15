@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-// laranja: #f2630f
+
 export default createGlobalStyle`
   * {
     margin: 0;
@@ -8,16 +8,13 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #0c0c0c;
-    color: #f4ede8;
+    background: #CDD1DE;
+    color: #0c0c0c;
     -webkit-font-smoothing: antialiased;
   }
   body, input, button {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-  }
-  h1, h2, h3, h4, h5, h6, strong {
-    font-weight: 500;
   }
   button {
     cursor: pointer;
