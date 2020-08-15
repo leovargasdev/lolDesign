@@ -3,6 +3,12 @@
 </h1>
 
 <p align="center">
+  <a href="https://telzir.leonardovargas.me/">
+    Link da aplicação
+  </a>
+</p>
+
+<p align="center">
   <img alt="Gif com o funcionamento da aplicação" src="../.github/web.gif" />
 </p>
 
