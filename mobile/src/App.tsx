@@ -1,14 +1,14 @@
 import React from 'react';
-import {SafeAreaView, View, Text, StatusBar} from 'react-native';
+import {SafeAreaView, StatusBar} from 'react-native';
+
+import Form from './components/Form';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
       <SafeAreaView>
-        <View>
-          <Text>aa</Text>
-        </View>
+        <Form />
       </SafeAreaView>
     </>
   );
