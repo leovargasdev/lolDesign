@@ -4,14 +4,12 @@ interface ButtonProps {
   active?: boolean;
 }
 export const Container = styled.View`
-  display: flex;
   align-items: center;
-  width: 100%;
-  padding: 20px 8px;
+  padding: 0 20px;
 `;
 
 export const Title = styled.Text`
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   font-size: 28px;
   font-weight: bold;
 `;
@@ -20,7 +18,6 @@ export const ContainerRow = styled.View`
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
 `;
 
@@ -51,4 +48,13 @@ export const Value = styled.Text`
   font-size: 20px;
   font-weight: bold;
   color: #f2630f;
+`;
+
+export const InputTime = styled.TextInput`
+  text-align: center;
+  width: 90px;
+  height: 30px;
+  padding: 2px;
+  border: 1px solid #f2630f;
+  border-radius: 6px;
 `;

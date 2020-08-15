@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, StatusBar} from 'react-native';
+import {View, StatusBar} from 'react-native';
 
 import Form from './components/Form';
 
@@ -7,9 +7,9 @@ const App = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
-      <SafeAreaView>
+      <View style={{flex: 1, justifyContent: 'center'}}>
         <Form />
-      </SafeAreaView>
+      </View>
     </>
   );
 };

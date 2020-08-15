@@ -1,13 +1,22 @@
 import React, {useState, useCallback, useMemo} from 'react';
-import {Text, View, TextInput} from 'react-native';
+import {Text, View} from 'react-native';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import {Container, Title, ContainerRow, Button, Label, Value} from './styles';
+import {
+  Container,
+  Title,
+  ContainerRow,
+  Button,
+  Label,
+  Value,
+  InputTime,
+} from './styles';
 
 const Form: React.FC = () => {
   const [plan, setPlan] = useState(30);
   const [origin, setOrigin] = useState(11);
   const [destiny, setDestiny] = useState(16);
-  const [timeCall, setTimeCall] = useState('0');
+  const [timeCall, setTimeCall] = useState('100');
 
   const DDDs = [11, 16, 17, 18];
   const plans = [30, 60, 120];
@@ -44,6 +53,7 @@ const Form: React.FC = () => {
 
   return (
     <Container>
+      <Icon name="phone-classic" size={60} color="#f2630f" />
       <Title>Calculo da Ligação</Title>
 
       <ContainerRow>
@@ -51,6 +61,7 @@ const Form: React.FC = () => {
           <Label>Origem</Label>
           {DDDs.map((ddd) => (
             <Button
+              key={ddd}
               active={origin === ddd}
               onPress={() => setDDD('origin', ddd)}>
               <Text style={{color: origin === ddd ? '#FFF' : '#333'}}>
@@ -63,6 +74,7 @@ const Form: React.FC = () => {
           <Label>Destino</Label>
           {DDDs.map((ddd) => (
             <Button
+              key={ddd}
               active={destiny === ddd}
               onPress={() => setDDD('destiny', ddd)}>
               <Text style={{color: destiny === ddd ? '#FFF' : '#333'}}>
@@ -75,6 +87,7 @@ const Form: React.FC = () => {
           <Label>Plano</Label>
           {plans.map((planButton) => (
             <Button
+              key={planButton}
               active={plan === planButton}
               onPress={() => setPlan(planButton)}>
               <Text style={{color: plan === planButton ? '#FFF' : '#333'}}>
@@ -85,9 +98,9 @@ const Form: React.FC = () => {
         </View>
       </ContainerRow>
 
-      <ContainerRow style={{width: 300, marginTop: 10}}>
-        <Label>Tempo</Label>
-        <TextInput
+      <ContainerRow style={{marginTop: 10}}>
+        <Label>Tempo em minutos</Label>
+        <InputTime
           keyboardType="number-pad"
           placeholder="0"
           value={timeCall}
@@ -96,19 +109,19 @@ const Form: React.FC = () => {
         />
       </ContainerRow>
 
-      <ContainerRow style={{width: 300, marginTop: 10}}>
-        <Label>Preço Minuto</Label>
+      <ContainerRow style={{marginTop: 10}}>
+        <Label>Preço por minuto</Label>
         <Value>R$ {priceMin.toString().concat('0')}</Value>
       </ContainerRow>
 
-      <ContainerRow style={{width: 300, marginTop: 10}}>
+      <ContainerRow style={{marginTop: 10}}>
         <Label>Com FaleMais</Label>
         <Value>R$ {pricePlan}</Value>
       </ContainerRow>
 
-      <ContainerRow style={{width: 300, marginTop: 10}}>
+      <ContainerRow style={{marginTop: 10}}>
         <Label>Sem FaleMais</Label>
-        <Value>R$ {(priceMin * timeCall).toFixed(2)}</Value>
+        <Value>R$ {(priceMin * Number(timeCall)).toFixed(2)}</Value>
       </ContainerRow>
 
       {/*
