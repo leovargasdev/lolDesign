@@ -1,10 +1,6 @@
-<p align="center">
-  <img alt="Interface da aplicação" src=".github/interface-app.png" width="100%">
-</p>
-
 ## :rocket: Plataformas
 
--  [Web](https://github.com/LeeonardoVargas/lolDesign/tree/master/mobile)
+-  [Web](https://github.com/LeeonardoVargas/lolDesign/tree/master/web)
 -  [Mobile](https://github.com/LeeonardoVargas/lolDesign/tree/master/mobile)
 
 ## 💻 Projeto
@@ -12,7 +8,7 @@
 Este projeto tem como objetivo cumprir o desafio proposto pela empresa [LOLDESIGN](https://www.loldesign.com.br/), o desafio consiste em montar duas aplicações, uma mobile e outra web, ambas com a finalidade de contruir uma plataforma
 para a empresa ficticia Telzir. Cópia da descrição do Desafio:
 
-### Desafio
+### Detalhes do Desafio
 
 A empresa de telefonia Telzir, especializada em chamadas de longa distância nacional, vai colocar um novo produto no mercado chamado FaleMais.
 
