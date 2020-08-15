@@ -1,4 +1,8 @@
-## :rocket: Plataformas
+<h1 align="center">
+  Desafio da LolDesign
+</h1>
+
+## 📝 Plataformas
 
 -  [Web](https://github.com/LeeonardoVargas/lolDesign/tree/master/web)
 -  [Mobile](https://github.com/LeeonardoVargas/lolDesign/tree/master/mobile)
