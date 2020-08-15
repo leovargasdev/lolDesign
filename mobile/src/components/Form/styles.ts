@@ -3,13 +3,14 @@ import styled, {css} from 'styled-components/native';
 interface ButtonProps {
   active?: boolean;
 }
+
 export const Container = styled.View`
   align-items: center;
   padding: 0 20px;
 `;
 
 export const Title = styled.Text`
-  margin: 0 0 30px;
+  margin: 0 0 10px;
   font-size: 28px;
   font-weight: bold;
 `;
@@ -19,6 +20,15 @@ export const ContainerRow = styled.View`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  margin-top: 10px;
+`;
+
+export const Label = styled.Text`
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 `;
 
 export const Button = styled.TouchableOpacity<ButtonProps>`
@@ -38,12 +48,6 @@ export const Button = styled.TouchableOpacity<ButtonProps>`
     `}
 `;
 
-export const Label = styled.Text`
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
-`;
-
 export const Value = styled.Text`
   font-size: 20px;
   font-weight: bold;
@@ -51,10 +55,11 @@ export const Value = styled.Text`
 `;
 
 export const InputTime = styled.TextInput`
-  text-align: center;
   width: 90px;
-  height: 30px;
-  padding: 2px;
+  padding: 0;
+
+  text-align: center;
+
   border: 1px solid #f2630f;
   border-radius: 6px;
 `;

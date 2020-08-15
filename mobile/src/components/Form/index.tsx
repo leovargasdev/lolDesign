@@ -98,7 +98,7 @@ const Form: React.FC = () => {
         </View>
       </ContainerRow>
 
-      <ContainerRow style={{marginTop: 10}}>
+      <ContainerRow>
         <Label>Tempo em minutos</Label>
         <InputTime
           keyboardType="number-pad"
@@ -109,17 +109,17 @@ const Form: React.FC = () => {
         />
       </ContainerRow>
 
-      <ContainerRow style={{marginTop: 10}}>
+      <ContainerRow>
         <Label>Preço por minuto</Label>
         <Value>R$ {priceMin.toString().concat('0')}</Value>
       </ContainerRow>
 
-      <ContainerRow style={{marginTop: 10}}>
+      <ContainerRow>
         <Label>Com FaleMais</Label>
         <Value>R$ {pricePlan}</Value>
       </ContainerRow>
 
-      <ContainerRow style={{marginTop: 10}}>
+      <ContainerRow>
         <Label>Sem FaleMais</Label>
         <Value>R$ {(priceMin * Number(timeCall)).toFixed(2)}</Value>
       </ContainerRow>
